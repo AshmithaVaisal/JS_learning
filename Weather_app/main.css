@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #333
+}
+
+/* body{
+    background-image: url(../Weather_app/weather-img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+.clouds-container{
+    background-image: url(../Weather_app/weather-img/cloudy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sunny-container{
+    background-image: url(../Weather_app/weather-img/sunny.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rainy-container{
+    background-image: url(../Weather_app/weather-img/rainy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drizzle-container{
+    background-image: url(../Weather_app/weather-img/drizzle_2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moody-container{
+    background-image: url(../Weather_app/weather-img/moody.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear-container{
+    background-image: url(../Weather_app/weather-img/clear.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.haze-container{
+    background-image: url(../Weather_app/weather-img/haze.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container{
+    background-image: url(../Weather_app/weather-img/bg\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.center-div{
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* backdrop-filter: blur(10px);  */
+}
+
+h2{
+    color: white;
+    margin-bottom: 30px;
+    font-size:40px;
+    color:#ffffcc;
+}
+form{
+    display: flex;
+    /* margin-bottom: 30px; */
+}
+.input-box{
+    padding: 10px;
+    /* margin-left: 5px; */
+    border-radius: 5px;
+    border: none;   
+}
+.input-box:focus{
+    outline: none;
+}
+
+#btn{
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: grey;
+}
+
+#btn:focus{
+    outline: none;
+}
+
+#result-input{
+    
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    color:whitesmoke;
+    font-size: 25px;
+    
+    
+}
