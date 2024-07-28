@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY TO-DO LIST</title>
+</head>
+<body>
+    <h1>Todo list</h1>
+    <div>
+    <input type="text" id="input-box">
+    <button id="btn">add</button>
+    
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+        </select>
+    </div>
+    <div id="result"></div>
+</body>
+<script>
+
+    const textInput = document.getElementById("input-box")
+    const addBtn = document.getElementById("btn")
+    const resultDiv = document.getElementById("result")
+    const filter = document.getElementById("filter");
+
+    let listItems = []
+    addBtn.addEventListener("click", () => {
+        const task = { text: textInput.value, completed: false };
+        listItems.push(task)
+        // console.log(listItems)
+        displayTasks(filter.value);
+        textInput.value = ""
+    });
+
+    filter.addEventListener("change", () => {
+            displayTasks(filter.value);
+    });
+
+    function addTask(task){
+        
+        let pTag = document.createElement("p")
+        pTag.innerText = task.text
+        pTag.style.textDecoration = task.completed ? 'line-through' : 'none';
+
+        // adding Done Button 
+        const tickButton = document.createElement("button")
+        tickButton.innerText = "Completed"
+
+        tickButton.addEventListener('click',()=>{
+            task.completed = !task.completed;
+                displayTasks(filter.value);
+            // pTag.style.textDecoration = 'line-through'
+            
+        });
+
+        // adding Delete Button
+        const delButton = document.createElement("button")
+        delButton.innerText = "Delete"
+
+        delButton.addEventListener('click',()=>{
+            listItems = listItems.filter(item => item !== task);
+            displayTasks(filter.value);
+            
+        });
+
+        pTag.appendChild(tickButton)
+        pTag.appendChild(delButton)
+        resultDiv.appendChild(pTag)
+
+    };
+    
+    function displayTasks(filterValue) {
+    resultDiv.innerHTML = ''; // Clear the current displayed tasks
+    let filteredTasks = [];
+    if (filterValue === 'completed') {
+        filteredTasks = listItems.filter(task => task.completed);
+    } else if (filterValue === 'uncompleted') {
+        filteredTasks = listItems.filter(task => !task.completed);
+    } else {
+        filteredTasks = listItems;
+    }
+    filteredTasks.forEach(task => addTask(task)); // Re-add the filtered tasks to the resultDiv
+}
+
+  
+    
+</script>
+</html> 
